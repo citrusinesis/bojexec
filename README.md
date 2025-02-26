@@ -6,17 +6,18 @@
 ## Project Structure
 ```text
 bojexec
+├── build
 ├── cmd
-│   └── bojexec
-│       └── main.go // CLI Entrypoint
-├── go.mod
-├── pkg
-│   ├── command     // CLI command
-│   ├── config      // Executor config parser (YAML, ...?)
-│   ├── crawl       // Problem page crawler
-│   ├── fs          // Read source code from filesystem
-│   └── runner      // Code runner powered by docker
-└── README.md
+│   └── bojexec     // Entrypoint
+├── internal
+│   ├── cmd         // CLI command
+│   └── problem     // Problem domain
+└── pkg
+    ├── config      // Executor config parser (YAML, ...?)
+    ├── crawl       // Problem page crawler
+    ├── fs          // Read source code from filesystem
+    ├── runner      // Code runner powered by docker
+    └── util        // Util packages
 ```
 
 ## Checkpoint

@@ -1,15 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"bojexec/pkg/util/log"
+)
 
-// Build information. These will be populated by ldflags during build
 var (
-	Name      = "example" // Change this to your app name
+	Name      = "bojexec"
 	Version   = "dev"
 	Commit    = "none"
 	BuildTime = "unknown"
 )
 
 func main() {
-	fmt.Println("Entrypoint of BOJEXEC", Name, Version, Commit, BuildTime)
+	mainLog := log.GetLogger()
+
+	mainLog.Debug("Entrypoint of BOJEXEC",
+		"name", Name,
+		"version", Version,
+		"commit", Commit,
+		"buildtime", BuildTime,
+	)
 }
