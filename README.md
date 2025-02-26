@@ -26,24 +26,28 @@ bojexec
   - [X] Parse problem document
   - [X] Abstract problem entity
 - [ ] FS
-  - [ ] Read source code from fs
+  - [ ] Create directory structure to save problem data
+  - [ ] Read solution code from fs
   - [ ] Parse file extension to determine language
+  - [ ] Save crawled test cases into `test-cases.json` (For caching & append custom test cases)
 - [ ] Runner
   - [ ] Get Docker image
   - [ ] Run container
-  - [ ] Configurable resource
-  - [ ] Output validator to check test case (example input/output)
+  - [ ] Configurable resource by fetching metadata from online
+    - [ ] Run Time
+    - [ ] Memory Usage
+  - [ ] Output validator to check results of tests
 - [ ] Config
-  - [ ] Config file parser
-  - [ ] Save default configuration
+  - [ ] Define config schema
+  - [ ] Config parser (YAML, TOML, JSON, ...)
+  - [ ] Save default configuration (`$HOME/config/.bojexec/default.yaml`)
   - [ ] Config file per problem
 - [ ] Command (cobra)
-  - [ ] Fetch problem
-  - [ ] Run/Validate test cases
-  - [ ] Submit
+  - [ ] Fetch problem (`boj fetch 1000`)
+  - [ ] Run/Validate test cases (`boj run 1000 --solution main.go`)
 
 ## Further Improvements
 - Login & Submit
-- Problem fetch and make directory structure
-- Indexer (md? db? ..?)
-- Web Pages
+  - login: `boj login` -> redirect to oauth
+- Problem Indexer by algorithm
+- GUI
