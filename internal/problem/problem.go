@@ -10,6 +10,7 @@ type TestCase struct {
 	Input  string
 	Output string
 }
+
 type Problem struct {
 	ID          uint
 	Title       string
