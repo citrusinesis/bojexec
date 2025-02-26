@@ -8,6 +8,8 @@ import (
 
 func charmHandler(w io.Writer) slog.Handler {
 	return log.NewWithOptions(w, log.Options{
-		Level: log.DebugLevel, // TODO: set level by env
+		Level:           log.DebugLevel, // TODO: set level by env
+		ReportCaller:    true,
+		ReportTimestamp: true,
 	})
 }
