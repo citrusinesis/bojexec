@@ -6,7 +6,6 @@
 ## Project Structure
 ```text
 bojexec
-├── build
 ├── cmd
 │   └── bojexec     // Entrypoint
 ├── internal
@@ -25,29 +24,68 @@ bojexec
   - [X] Send Request to baekjoon
   - [X] Parse problem document
   - [X] Abstract problem entity
+  - [ ] Parse checker metadata (Timeout, Memory Usage)
+    - ```html
+      <table class="table" id="problem-info">
+        <thead>
+          <tr>
+            <th style="width:16%;">시간 제한</th>
+            <th style="width:16%;">메모리 제한</th>
+            <th style="width:17%;">제출</th>
+            <th style="width:17%;">정답</th>
+            <th style="width:17%;">맞힌 사람</th>
+            <th style="width:17%;">정답 비율</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2 초 </td>
+            <td>128 MB</td>
+            <td>1232987</td>
+            <td>481941</td>
+            <td>328035</td>
+            <td>38.592%</td>
+          </tr>
+        </tbody>
+      </table>
+      ```
 - [ ] FS
   - [ ] Create directory structure to save problem data
   - [ ] Read solution code from fs
   - [ ] Parse file extension to determine language
   - [ ] Save crawled test cases into `test-cases.json` (For caching & append custom test cases)
+  - [ ] Save problem description to Markdown
+    - [html-to-markdown](https://github.com/JohannesKaufmann/html-to-markdown)
 - [ ] Runner
-  - [ ] Get Docker image
-  - [ ] Run container
+  - [ ] Get Docker image & Run container
+    - [Official Docker Go SDK](https://pkg.go.dev/github.com/docker/docker/client?utm_source=godoc)
   - [ ] Configurable resource by fetching metadata from online
-    - [ ] Run Time
+    - [ ] Timeout
     - [ ] Memory Usage
-  - [ ] Output validator to check results of tests
+  - [ ] Output validator to check results of tests ([Problem style docs](https://help.acmicpc.net/problem/style))
+    - [ ] ICPC Style
+    - [ ] Subtask
+    - [ ] Score
+    - [ ] Implement Function
+    - [ ] Interactive
+    - [ ] 2 Step
+    - [ ] Check whole case (Same as ICPC style)
+    - [ ] Implement Class
 - [ ] Config
   - [ ] Define config schema
   - [ ] Config parser (YAML, TOML, JSON, ...)
   - [ ] Save default configuration (`$HOME/config/.bojexec/default.yaml`)
   - [ ] Config file per problem
-- [ ] Command (cobra)
+- [ ] Command ([cobra](https://github.com/spf13/cobra) or [bubbletea](https://github.com/charmbracelet/bubbletea))
   - [ ] Fetch problem (`boj fetch 1000`)
   - [ ] Run/Validate test cases (`boj run 1000 --solution main.go`)
 
 ## Further Improvements
 - Login & Submit
-  - login: `boj login` -> redirect to oauth
+  - login: `boj login` 
+  - submit: `boj submit 1000 --solution main.go`
 - Problem Indexer by algorithm
+- Blog Helper
+  - Review file builder (Markdown, HTML, ...)
+  - Post to CMS (Hugo, Jekyll, ...)
 - GUI
