@@ -1,12 +1,14 @@
 package problem
 
 import (
-	"bojexec/pkg/crawl"
-	"bojexec/pkg/util/log"
 	"fmt"
-	"github.com/PuerkitoBio/goquery"
 	"net/http"
 	"strings"
+
+	"bojexec/pkg/crawl"
+	"bojexec/pkg/util/log"
+
+	"github.com/PuerkitoBio/goquery"
 )
 
 var (

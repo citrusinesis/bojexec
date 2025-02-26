@@ -1,9 +1,10 @@
 package log
 
 import (
-	"github.com/charmbracelet/log"
 	"io"
 	"log/slog"
+
+	"github.com/charmbracelet/log"
 )
 
 func charmHandler(w io.Writer) slog.Handler {

@@ -1,9 +1,7 @@
 package main
 
 import (
-	"bojexec/internal/problem"
 	"bojexec/pkg/util/log"
-	"fmt"
 )
 
 var (
@@ -22,6 +20,4 @@ func main() {
 		"commit", Commit,
 		"buildtime", BuildTime,
 	)
-
-	fmt.Println(problem.Get(1000))
 }
