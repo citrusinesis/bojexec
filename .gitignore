@@ -1,0 +1,42 @@
+# --- Editor/IDE files ---
+*.swp
+*~
+.idea/
+.vscode/
+
+# --- OS generated files ---
+.DS_Store
+Thumbs.db
+
+# --- Environment and credential files ---
+# (Keep sensitive env variables out of git.)
+.env
+.env.*.local
+
+# --- Log files ---
+*.log
+
+# --- Build, temporary, and cache directories ---
+tmp/
+temp/
+cache/
+build/
+dist/
+*.o
+*.a
+*.so
+
+# --- Docker-specific ---
+# Although .dockerignore should be version-controlled, you might have local overrides:
+docker-compose.override.yml
+
+# --- Language-specific ignores (optional) ---
+# Python
+__pycache__/
+*.py[cod]
+
+# Node.js
+node_modules/
+
+# --- Additional local configuration files ---
+*.local

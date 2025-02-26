@@ -1,0 +1,29 @@
+# --- Exclude version control directories ---
+.git
+.gitignore
+
+# --- Exclude OS generated files ---
+.DS_Store
+Thumbs.db
+
+# --- Exclude temporary files ---
+*.swp
+*~
+
+# --- Exclude log files and local build artifacts ---
+*.log
+tmp/
+temp/
+build/
+dist/
+
+# --- Exclude dependency directories (if installing fresh during build) ---
+node_modules/
+__pycache__/
+
+# --- Exclude environment files containing secrets ---
+.env
+.env.*.local
+
+# --- Exclude other non-essential local files ---
+*.local
