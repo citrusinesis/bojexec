@@ -41,10 +41,4 @@ version:
 	@echo "Commit:     ${COMMIT}"
 	@echo "Build Time: ${BUILD_TIME}"
 
-help:
-	@echo "Usage:"
-	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /'
-
-.DEFAULT_GOAL := help
-
-.PHONY: build run clean test test-coverage lint help version
+.PHONY: build run clean test test-coverage lint version
