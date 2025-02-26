@@ -71,6 +71,9 @@ bojexec
     - [ ] 2 Step
     - [ ] Check whole case (Same as ICPC style)
     - [ ] Implement Class
+  - DomJudge? Or Language Per Image
+    - [DomJudge Docker Image](https://hub.docker.com/r/domjudge/domserver/)
+    - [선배님의 채점서버 운영 수기](https://docs.google.com/document/d/1hzp67Ql6v2tEx6eM-SXVxrL2slnJblls/edit?tab=t.0)
 - [ ] Config
   - [ ] Define config schema
   - [ ] Config parser (YAML, TOML, JSON, ...)
