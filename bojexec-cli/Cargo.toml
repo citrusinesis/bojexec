@@ -1,0 +1,11 @@
+[package]
+name = "bojexec-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bojexec-core = { path = "../bojexec-core" }
+anyhow = "1.0.96"
+clap = { version = "4.5.31", features = ["derive"] }
+tokio = "1.43.0"
+async-trait = "0.1.86"
